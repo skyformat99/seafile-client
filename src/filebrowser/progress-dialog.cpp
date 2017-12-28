@@ -79,7 +79,7 @@ void FileBrowserProgressDialog::initTaskInfo()
         label = tr("Downloading %1");
     }
     setWindowTitle(title);
-    setLabelText(label.arg(task_->fileName()));
+    setLabelText(label_.arg(QFileInfo(task_->localFilePath()).fileName()));
 
     more_details_label_->setText("");
 
